@@ -1,10 +1,9 @@
 import React, { Component } from "react";
-import { Route, Link } from "react-router-dom";
+// import { Route } from "react-router-dom";
 import axios from "axios";
 import "./App.css";
-import CelebrityDetail from "./CelebrityDetail";
 
-export default class App extends Component {
+export default class CelebrityDetail extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -26,15 +25,8 @@ export default class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <h1>Movie Celebrities</h1>
-        {this.state.celebrities.map(celebrity => (
-          <Link to={`/celebrity-detail/${celebrity._id}`}>
-            <img src={celebrity.profile_path} alt="" />
-            <li key={celebrity._id}>{celebrity.name}</li>
-          </Link>
-        ))}
-        <Route path="/celebrity-detail/:celebrityId" component={CelebrityDetail} />
+      <div className="CelebrityDetail">
+        <img src={this.state.celebrities} alt="" />
       </div>
     );
   }
