@@ -7,6 +7,9 @@
   list-style-type: none;
   text-align: left;
 }
+.App img {
+  width: 50px;
+}
 
 a {
   text-decoration: none;

@@ -30,7 +30,7 @@ export default class App extends Component {
         <h1>Movie Celebrities</h1>
         {this.state.celebrities.map(celebrity => (
           <Link to={`/celebrity-detail/${celebrity._id}`}>
-            <img src={celebrity.profile_path} alt="" />
+            <img src={`https://image.tmdb.org/t/p/w185/${celebrity.profile_path}`} alt="" />
             <li key={celebrity._id}>{celebrity.name}</li>
           </Link>
         ))}

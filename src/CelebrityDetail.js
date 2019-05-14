@@ -24,7 +24,8 @@ export default class CelebrityDetail extends Component {
   render() {
     return (
       <div className="CelebrityDetail">
-        <img src={this.state.celebrities} alt="" />
+        <img src={this.state.celebrities.profile_path} alt="" />
+        <h1>{this.state.celebrities.name}</h1>
       </div>
     );
   }
