@@ -30,11 +30,14 @@ export default class App extends Component {
         <h1>Movie Celebrities</h1>
         {this.state.celebrities.map(celebrity => (
           <Link to={`/celebrity-detail/${celebrity._id}`}>
-            <img src={celebrity.profile_path} alt="" />
+            <img src={celebrity.profile_path/} alt="" />
             <li key={celebrity._id}>{celebrity.name}</li>
           </Link>
         ))}
-        <Route path="/celebrity-detail/:celebrityId" component={CelebrityDetail} />
+        <Route
+          path="/celebrity-detail/:celebrityId"
+          component={CelebrityDetail}
+        />
       </div>
     );
   }

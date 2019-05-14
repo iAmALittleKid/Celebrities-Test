@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-// import { Route } from "react-router-dom";
 import axios from "axios";
 import "./App.css";
 
@@ -17,7 +16,6 @@ export default class CelebrityDetail extends Component {
         "https://api.themoviedb.org/3/person/popular?page=1&api_key=5c31f0e8bd06141c7543213b78f1c313"
       )
       .then(result => {
-        console.log("result.data", result.data.results);
         const celebrities = result.data.results;
         this.setState({ celebrities });
       });
